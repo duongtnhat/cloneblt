@@ -2,11 +2,25 @@ class BtlController < ApplicationController
 
   #router("/")
   def index
-    #options = {http_proxyaddr: 'fsoft-proxy',http_proxyport:'8080', http_proxyuser:'nhatdt2', http_proxypass:'Chandoiwa01234'}
-    response = HTTParty.get 'http://m.blogtruyen.com/'#, options
+    options = {http_proxyaddr: 'fsoft-proxy',http_proxyport:'8080', http_proxyuser:'nhatdt2', http_proxypass:'Chandoiwa01234'}
+    response = HTTParty.get 'http://m.blogtruyen.com/', options
     html_response = response.body
     @items = extract_item html_response
     render 'btl/index'
+  end
+
+  #router("/:id/:name")
+  def story
+    id = request.parameters[:id]
+    name = request.parameters[:name]
+    render text: id + name
+  end
+
+  #router("/:cid/:name")
+  def chapter
+    id = request.parameters[:id]
+    name = request.parameters[:name]
+    render text: id + name
   end
 
   def extract_item(html_response)
@@ -15,7 +29,7 @@ class BtlController < ApplicationController
     list = []
     ul.xpath('.//li').each {|e|
       link = e.xpath('.//a/@href').first.value
-      title = e.xpath('.//span').to_s
+      title = e.xpath('.//span').first.content
       img = e.xpath('.//img/@src').first.value
       list.push ({'link' => link, 'title' => title, 'img' => img})
     }

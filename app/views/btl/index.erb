@@ -1,1 +1,15 @@
-<%= @items.to_s %>
+<ul class="manga-list">
+  <% @items.each {
+      |item| %>
+    <li>
+      <div class="post">
+        <a href="<%= item["link"] %>">
+          <span class="cover">
+              <img src="<%= item["img"] %>" >
+          </span>
+          <p class="title"><%= item["title"] %></p>
+        </a>
+      </div>
+    </li>
+  <% } %>
+</ul>
