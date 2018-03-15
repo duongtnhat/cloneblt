@@ -2,8 +2,8 @@ class BtlController < ApplicationController
 
   #router("/")
   def index
-    options = {http_proxyaddr: 'fsoft-proxy',http_proxyport:'8080', http_proxyuser:'nhatdt2', http_proxypass:'Chandoiwa01234'}
-    response = HTTParty.get 'http://m.blogtruyen.com/', options
+    #options = {http_proxyaddr: 'fsoft-proxy',http_proxyport:'8080', http_proxyuser:'nhatdt2', http_proxypass:'Chandoiwa01234'}
+    response = HTTParty.get 'http://m.blogtruyen.com/'#, options
     html_response = response.body
     @items = extract_item html_response
     render 'btl/index'

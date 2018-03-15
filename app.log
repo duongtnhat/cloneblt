@@ -1,28 +1,3 @@
-2018-03-15T10:21:46.005324+00:00 app[web.1]: 	from /app/vendor/ruby-2.3.4/lib/ruby/2.3.0/tsort.rb:347:in `each_strongly_connected_component'
-2018-03-15T10:21:46.005325+00:00 app[web.1]: 	from /app/vendor/ruby-2.3.4/lib/ruby/2.3.0/tsort.rb:226:in `tsort_each'
-2018-03-15T10:21:46.005320+00:00 app[web.1]: 	from /app/vendor/ruby-2.3.4/lib/ruby/2.3.0/tsort.rb:349:in `block in each_strongly_connected_component'
-2018-03-15T10:21:46.005326+00:00 app[web.1]: 	from /app/vendor/ruby-2.3.4/lib/ruby/2.3.0/tsort.rb:205:in `tsort_each'
-2018-03-15T10:21:46.005327+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/railties-5.1.5/lib/rails/initializable.rb:58:in `run_initializers'
-2018-03-15T10:21:46.005329+00:00 app[web.1]: 	from /app/config/environment.rb:5:in `<top (required)>'
-2018-03-15T10:21:46.005328+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/railties-5.1.5/lib/rails/application.rb:353:in `initialize!'
-2018-03-15T10:21:46.005333+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/rack-2.0.4/lib/rack/builder.rb:55:in `instance_eval'
-2018-03-15T10:21:46.005331+00:00 app[web.1]: 	from config.ru:3:in `require_relative'
-2018-03-15T10:21:46.005332+00:00 app[web.1]: 	from config.ru:3:in `block in <main>'
-2018-03-15T10:21:46.005336+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/rack-2.0.4/lib/rack/builder.rb:55:in `initialize'
-2018-03-15T10:21:46.005337+00:00 app[web.1]: 	from config.ru:in `new'
-2018-03-15T10:21:46.005338+00:00 app[web.1]: 	from config.ru:in `<main>'
-2018-03-15T10:21:46.005341+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/rack-2.0.4/lib/rack/builder.rb:40:in `parse_file'
-2018-03-15T10:21:46.005339+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/rack-2.0.4/lib/rack/builder.rb:49:in `eval'
-2018-03-15T10:21:46.005343+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/rack-2.0.4/lib/rack/server.rb:319:in `build_app_and_options_from_config'
-2018-03-15T10:21:46.005340+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/rack-2.0.4/lib/rack/builder.rb:49:in `new_from_string'
-2018-03-15T10:21:46.005345+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/railties-5.1.5/lib/rails/commands/server/server_command.rb:24:in `app'
-2018-03-15T10:21:46.005346+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/rack-2.0.4/lib/rack/server.rb:354:in `wrapped_app'
-2018-03-15T10:21:46.005347+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/rack-2.0.4/lib/rack/server.rb:283:in `start'
-2018-03-15T10:21:46.005344+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/rack-2.0.4/lib/rack/server.rb:219:in `app'
-2018-03-15T10:21:46.005348+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/railties-5.1.5/lib/rails/commands/server/server_command.rb:44:in `start'
-2018-03-15T10:21:46.005349+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/railties-5.1.5/lib/rails/commands/server/server_command.rb:135:in `block in perform'
-2018-03-15T10:21:46.005355+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/thor-0.20.0/lib/thor/invocation.rb:126:in `invoke_command'
-2018-03-15T10:21:46.005354+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/thor-0.20.0/lib/thor/command.rb:27:in `run'
 2018-03-15T10:21:46.005350+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/railties-5.1.5/lib/rails/commands/server/server_command.rb:130:in `tap'
 2018-03-15T10:21:46.005352+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/railties-5.1.5/lib/rails/commands/server/server_command.rb:130:in `perform'
 2018-03-15T10:21:46.005356+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.3.0/gems/thor-0.20.0/lib/thor.rb:387:in `dispatch'
@@ -99,4 +74,29 @@
 2018-03-15T10:21:52.590878+00:00 heroku[web.1]: Process exited with status 1
 2018-03-15T10:21:53.304033+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=cloneblt.herokuapp.com request_id=c6b06700-1dd4-407c-a1f6-527278c0df15 fwd="210.245.53.9" dyno= connect= service= status=503 bytes= protocol=https
 2018-03-15T10:21:55.493410+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=cloneblt.herokuapp.com request_id=b0fbd3a0-c662-43f3-a6ba-2db704a8c475 fwd="210.245.53.9" dyno= connect= service= status=503 bytes= protocol=https
+2018-03-15T10:34:07.000000+00:00 app[api]: Build started by user nhatdtse03990@fpt.edu.vn
+2018-03-15T10:34:33.112928+00:00 app[api]: Deploy ce1f8cb8 by user nhatdtse03990@fpt.edu.vn
+2018-03-15T10:34:33.112928+00:00 app[api]: Release v6 created by user nhatdtse03990@fpt.edu.vn
+2018-03-15T10:34:07.000000+00:00 app[api]: Build succeeded
+2018-03-15T10:34:33.962491+00:00 heroku[web.1]: State changed from crashed to starting
+2018-03-15T10:34:36.750841+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 40757 -e production`
+2018-03-15T10:34:39.831012+00:00 app[web.1]: => Booting Puma
+2018-03-15T10:34:39.831034+00:00 app[web.1]: => Rails 5.1.5 application starting in production 
+2018-03-15T10:34:39.831036+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2018-03-15T10:34:39.831038+00:00 app[web.1]: Puma starting in single mode...
+2018-03-15T10:34:39.831044+00:00 app[web.1]: * Version 3.11.3 (ruby 2.3.4-p301), codename: Love Song
+2018-03-15T10:34:39.831046+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2018-03-15T10:34:39.831047+00:00 app[web.1]: * Environment: production
+2018-03-15T10:34:39.831115+00:00 app[web.1]: * Listening on tcp://0.0.0.0:40757
+2018-03-15T10:34:39.831778+00:00 app[web.1]: Use Ctrl-C to stop
+2018-03-15T10:34:40.399577+00:00 heroku[web.1]: State changed from starting to up
+2018-03-15T10:34:46.946239+00:00 heroku[router]: at=info method=GET path="/" host=cloneblt.herokuapp.com request_id=fda757b4-7aa9-478f-a1cf-c6156c9393cd fwd="210.245.53.9" dyno=web.1 connect=0ms service=44ms status=500 bytes=1827 protocol=https
+2018-03-15T10:34:46.904420+00:00 app[web.1]: I, [2018-03-15T10:34:46.904296 #4]  INFO -- : [fda757b4-7aa9-478f-a1cf-c6156c9393cd] Started GET "/" for 210.245.53.9 at 2018-03-15 10:34:46 +0000
+2018-03-15T10:34:46.906441+00:00 app[web.1]: I, [2018-03-15T10:34:46.906353 #4]  INFO -- : [fda757b4-7aa9-478f-a1cf-c6156c9393cd] Processing by BtlController#index as HTML
+2018-03-15T10:34:46.943643+00:00 app[web.1]: I, [2018-03-15T10:34:46.943510 #4]  INFO -- : [fda757b4-7aa9-478f-a1cf-c6156c9393cd] Completed 500 Internal Server Error in 37ms
+2018-03-15T10:34:46.944499+00:00 app[web.1]: F, [2018-03-15T10:34:46.944417 #4] FATAL -- : [fda757b4-7aa9-478f-a1cf-c6156c9393cd]   
+2018-03-15T10:34:46.944587+00:00 app[web.1]: F, [2018-03-15T10:34:46.944510 #4] FATAL -- : [fda757b4-7aa9-478f-a1cf-c6156c9393cd] SocketError (Failed to open TCP connection to fsoft-proxy:8080 (getaddrinfo: Name or service not known)):
+2018-03-15T10:34:46.944663+00:00 app[web.1]: F, [2018-03-15T10:34:46.944591 #4] FATAL -- : [fda757b4-7aa9-478f-a1cf-c6156c9393cd]   
+2018-03-15T10:34:46.944753+00:00 app[web.1]: F, [2018-03-15T10:34:46.944682 #4] FATAL -- : [fda757b4-7aa9-478f-a1cf-c6156c9393cd] app/controllers/btl_controller.rb:6:in `index'
+2018-03-15T10:34:47.364975+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=cloneblt.herokuapp.com request_id=f56a32de-23e1-4739-90e4-a11d10d29e54 fwd="210.245.53.9" dyno=web.1 connect=0ms service=1ms status=200 bytes=143 protocol=https
 Terminate batch job (Y/N)? 
