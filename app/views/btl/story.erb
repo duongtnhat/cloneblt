@@ -1,0 +1,15 @@
+<div class="table-detail">
+  <div class="manga-chapters">
+    <dl>
+      <dd class="chlist">
+        <% @items.each { |item| %>
+          <a href="<%= item["link"] %>">
+            <%= item["title"] %>
+            <span style="float: right"><%= item["date"] %></span>
+          </a>
+        <% } %>
+      </dd>
+    </dl>
+  </div>
+
+</div>
