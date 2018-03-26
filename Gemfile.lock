@@ -65,6 +65,7 @@ GEM
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18-x64-mingw32)
+    ffi (1.9.18-x86-mingw32)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     httparty (0.15.6)
@@ -87,6 +88,8 @@ GEM
     multi_xml (0.6.0)
     nio4r (2.1.0)
     nokogiri (1.8.1-x64-mingw32)
+      mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.1-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     public_suffix (3.0.1)
     puma (3.11.0)
@@ -167,6 +170,7 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86-mingw32
 
 DEPENDENCIES
   byebug

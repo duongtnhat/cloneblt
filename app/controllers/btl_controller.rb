@@ -29,7 +29,6 @@ class BtlController < ApplicationController
     response = HTTParty.get url
     html = Nokogiri::HTML(response)
     content = html.xpath('//div[@class="content"]').first
-    content['class'] = 'mangaread-img'
     @post = content
     @bar = html.xpath('//div[contains(@class, "linkchapter")]').first
     render 'btl/chapter'

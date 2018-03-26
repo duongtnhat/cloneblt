@@ -1,15 +1,38 @@
-<ul class="manga-list">
-  <% @items.each {
-      |item| %>
-    <li>
-      <div class="post">
-        <a href="<%= item["link"] %>">
-          <span class="cover">
-              <img src="<%= item["img"] %>" >
-          </span>
-          <p class="title"><%= item["title"] %></p>
-        </a>
+<div class="container body-content">
+  <section class="home-page gridview">
+    <ul class="list-unstyled list-manga row">
+      <% @items.each {
+          |item| %>
+      <li class="item col-xs-6 col-sm-4">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="ps-relative">
+              <a href="<%= item["link"] %>">
+                <img src="<%= item["img"] %>" alt="<%= item["title"] %>" class="img img-thumbnail">
+              </a>
+              <div class="title">
+                <a href="<%= item["link"] %>"><%= item["title"] %></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <% } %>
+    </ul>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <nav class="paging-new">
+          <ul class="pagination paging list-unstyled">
+            <li class=""><a href="/page-<%= @page-1 %>"><i class="glyphicon glyphicon-step-backward red"></i></a></li>
+            <li class=""><a href="/page-<%= @page+1 %>"><i class="glyphicon glyphicon-step-forward red"></i></a></li>
+          </ul>
+
+        </nav>
       </div>
-    </li>
-  <% } %>
-</ul>
+    </div>
+
+  </section>
+
+  <hr>
+
+</div>
