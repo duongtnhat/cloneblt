@@ -15,7 +15,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body style="background: url(<%= asset_path 'bg.jpg'%>) no-repeat center center fixed" >
+  <body style="background: url(<%= asset_path 'bg.jpg'%>) repeat-y center center fixed" >
     <%= yield %>
   </body>
 </html>
