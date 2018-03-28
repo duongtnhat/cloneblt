@@ -1,5 +1,53 @@
 <div class="container body-content">
   <article class="chapter-detail">
+    <div class="al-c linkchapter mt15">
+      <div class="row">
+        <% if !@pre.nil? %>
+          <div class="col-sm-6 col-xs-6">
+            <a href="<%= @pre %>" class="btn btn-success pull-left c-prev">
+              <i class="fa fa-angle-double-left"></i>
+              Chap trước
+            </a>
+          </div>
+        <% end %>
+        <% if !@next.nil? %>
+          <div class="col-sm-6 col-xs-6">
+            <a href="<%= @next %>" class="btn btn-success pull-right c-next">Chap kế
+              <i class="fa fa-angle-double-right"></i></a>
+          </div>
+        <% end %>
+      </div>
+      <div class="row mt10">
+        <div class="col-sm-12 col-xs-12">
+          <%= raw(@list) %>
+        </div>
+      </div>
+    </div>
+    
     <%= raw(@post) %>
+
+    <div class="al-c linkchapter mt15">
+      <div class="row">
+        <% if !@pre.nil? %>
+          <div class="col-sm-6 col-xs-6">
+            <a href="<%= @pre %>" class="btn btn-success pull-left c-prev">
+              <i class="fa fa-angle-double-left"></i>
+              Chap trước
+            </a>
+          </div>
+        <% end %>
+        <% if !@next.nil? %>
+          <div class="col-sm-6 col-xs-6">
+            <a href="<%= @next %>" class="btn btn-success pull-right c-next">Chap kế
+              <i class="fa fa-angle-double-right"></i></a>
+          </div>
+        <% end %>
+      </div>
+      <div class="row mt10">
+        <div class="col-sm-12 col-xs-12">
+          <%= raw(@list) %>
+        </div>
+      </div>
+    </div>
   </article>
 </div>

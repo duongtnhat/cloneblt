@@ -28,9 +28,12 @@ class BtlController < ApplicationController
     url = 'http://m.blogtruyen.com/'+request.parameters[:id]
     response = HTTParty.get url
     html = Nokogiri::HTML(response)
-    content = html.xpath('//div[@class="content"]').first
-    @post = content
-    @bar = html.xpath('//div[contains(@class, "linkchapter")]').first
+    @post = html.xpath('//div[@class="content"]').first
+    list = html.xpath('//select[@class="form-control"]').first
+    @list = list
+    @selected = list.xpath('.//option[@selected="selected"]').first
+    @pre = @selected.next.nil? ? nil : @selected.next.attr("value")
+    @next = @selected.previous.nil? ? nil : @selected.previous.attr("value")
     render 'btl/chapter'
   end
 
