@@ -94,9 +94,9 @@ a:hover, a:focus {text-decoration:none;}
 .navbar-nav {margin-top:0;}
 .navbar-toggle {margin-right:15px;}
 
-.navbar-header .text-search { width:calc(100% - 90px); margin: 7px auto 5px 15px; height:35px; padding: 5px 10px;}
+.navbar-header .text-search { width:100%; margin: 7px 15px 5px 15px; height:35px; padding: 5px 10px;}
 .icon-search{
-    background: url(/Content/images/icon_search.png) no-repeat;
+    background: url(http://m.blogtruyen.com/Content/images/icon_search.png) no-repeat;
     background-position: calc(100% - 9px) center;
     border-radius: 0;
     background-color: #fff;
@@ -345,7 +345,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focu
 @media screen and (min-width: 768px){
     .container {width: 767px;}
     .navbar-header {float:none;}
-    .navbar-header .text-search {width:88% !important;}
+    .navbar-header .text-search {width:100% !important;}
     .navbar-toggle {display:block }
     .navbar-collapse.collapse {display:none !important;}
     .navbar-collapse.collapse.in {display: block !important}

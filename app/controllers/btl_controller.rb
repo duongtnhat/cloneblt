@@ -1,9 +1,7 @@
 class BtlController < ApplicationController
 
-  #@@options = {http_proxyaddr: 'fsoft-proxy',http_proxyport:'8080', http_proxyuser:'nhatdt2', http_proxypass:'Chandoiwa01234'}
-
   #router("/")
-  # #router("/:page")
+  #router("/:page")
   def index
     page = request.parameters[:page] || 'page-1'
     url = 'http://m.blogtruyen.com/' + page
@@ -35,6 +33,16 @@ class BtlController < ApplicationController
     @pre = @selected.next.nil? ? nil : @selected.next.attr("value")
     @next = @selected.previous.nil? ? nil : @selected.previous.attr("value")
     render 'btl/chapter'
+  end
+
+  #route("/timkiem?keyword=:keyword&p=:page")
+  def search
+    url = 'http://m.blogtruyen.com/timkiem?keyword=' + request.parameters[:keyword]
+    url += '&p=' + request.parameters[:p] unless request.parameters[:p].nil?
+    response = HTTParty.get url
+    html = Nokogiri::HTML(response)
+    @result = html.xpath('//article').first
+    render 'btl/search'
   end
 
   def extract_item(html_response)

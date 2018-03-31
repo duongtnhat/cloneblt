@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'btl#index'
   get '/:id/:name', to: 'btl#story' , :constraints => { :id => /\d+/ }
   get '/:id/:name', to: 'btl#chapter' , :constraints => { :id => /c\d+/ }
-  get '/:page', to: 'btl#index', :constraints => { :id => /page-\d+/ }
+  get '/:page', to: 'btl#index', :constraints => { :page => /page-\d+/ }
+  get '/timkiem', to: 'btl#search'
 end

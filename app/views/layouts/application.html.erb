@@ -19,15 +19,25 @@
 </head>
 
 <body style="background: #000000 url(<%= asset_path 'bg.jpg'%>) repeat-y center center fixed">
-  <div class="row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-10">
-      <a href="http://cloneblt.herokuapp.com/">
-        <!--<img src="https://i.pinimg.com/originals/2a/78/73/2a7873251eee50375e7503ec3b6111bb.jpg" class="cover">-->
-      </a>
+<div class="navbar navbar-inverse headerNav nav-down">
+  <div class="container">
+    <div class="navbar-header">
+      <form action="/timkiem">
+        <input type="text" class="text-search icon-search" name="keyword" placeholder="Nhập tên truyện">
+      </form>
     </div>
-    <div class="col-sm-1"></div>
+
   </div>
-  <%= yield %>
+</div>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10">
+    <a href="/">
+      <img src="https://i.pinimg.com/originals/2a/78/73/2a7873251eee50375e7503ec3b6111bb.jpg" class="cover">
+    </a>
+  </div>
+  <div class="col-sm-1"></div>
+</div>
+<%= yield %>
 </body>
 </html>
