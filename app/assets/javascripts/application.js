@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log("ready!");
     var iScrollPos = 0;
     $(window).scroll(function () {
         var iCurScrollPos = $(this).scrollTop();

@@ -23,7 +23,9 @@ class BtlController < ApplicationController
 
   #router("/:cid/:name")
   def chapter
-    url = 'http://m.blogtruyen.com/'+request.parameters[:id]
+    id = request.parameters[:id]
+    name = request.parameters[:name]
+    url = 'http://m.blogtruyen.com/%s/%s' % [id, name]
     response = HTTParty.get url
     html = Nokogiri::HTML(response)
     @post = html.xpath('//div[@class="content"]').first
