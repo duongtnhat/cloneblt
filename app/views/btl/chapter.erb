@@ -3,7 +3,7 @@
     <div class="al-c linkchapter mt15">
       <div class="row">
         <div class="col-sm-6 col-xs-6">
-          <% if !@pre.nil? %>
+          <% if @pre.present? %>
             <a href="<%= @pre %>" class="btn btn-success pull-left c-prev">
               <i class="fa fa-angle-double-left"></i>
               Chap trước
@@ -11,7 +11,7 @@
           <% end %>
         </div>
         <div class="col-sm-6 col-xs-6">
-          <% if !@next.nil? %>
+          <% if @next.present? %>
             <a href="<%= @next %>" class="btn btn-success pull-right c-next">Chap kế
               <i class="fa fa-angle-double-right"></i></a>
           <% end %>
@@ -29,7 +29,7 @@
     <div class="al-c linkchapter mt15">
       <div class="row">
         <div class="col-sm-6 col-xs-6">
-          <% if !@pre.nil? %>
+          <% if @pre.present? %>
             <a href="<%= @pre %>" class="btn btn-success pull-left c-prev">
               <i class="fa fa-angle-double-left"></i>
               Chap trước
@@ -37,7 +37,7 @@
           <% end %>
         </div>
         <div class="col-sm-6 col-xs-6">
-          <% if !@next.nil? %>
+          <% if @next.present? %>
             <a href="<%= @next %>" class="btn btn-success pull-right c-next">Chap kế
               <i class="fa fa-angle-double-right"></i></a>
           <% end %>

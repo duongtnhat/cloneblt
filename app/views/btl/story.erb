@@ -7,19 +7,15 @@
         </div>
         <div class="panel-body">
           <ul class="list-unstyled" id="listChapter">
-
-            <% @items.each {|item| %>
+            <% @items.each do |item| %>
               <li>
                 <div class="row">
                   <div class="col-sm-7 col-xs-6">
-                    <a href="<%= item["link"] %>"><%= item["title"] %></a>
-                  </div>
-                  <div class="col-sm-5 col-xs-6 text-right pdr10">
-                    <!--<%= item["date"] %>-->
+                    <a href="<%= item[:link] %>"><%= item[:title] %></a>
                   </div>
                 </div>
               </li>
-            <% } %>
+            <% end %>
           </ul>
         </div>
       </div>
