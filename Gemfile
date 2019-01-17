@@ -23,3 +23,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'httparty'
 gem 'nokogiri'
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano3-puma'
+gem 'capistrano-rvm'
