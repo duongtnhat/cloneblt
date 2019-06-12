@@ -76,7 +76,7 @@ class BtlController < ApplicationController
   def http_get(url)
     Rails.cache.fetch(url) do
       logger.info "Load " << url
-      response = HTTParty.get url
+      response = HTTParty.get url, verify:false
       break unless response.code == 200
       logger.info "Complete load " << url
       response.body
